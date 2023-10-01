@@ -1,0 +1,16 @@
+version: "3"
+services:
+  client:
+    image: "emanewere/multi-client-two"
+    mem_limit: 128m
+    hostname: client
+  server:
+    image: "emanewere/multi-server-two"
+    mem_limit: 128m
+    hostname: api
+  nginx:
+    image: "emanewere/multi-nginx"
+    mem_limit: 128m
+    hostname: nginx
+    ports:
+      - "80:80"
